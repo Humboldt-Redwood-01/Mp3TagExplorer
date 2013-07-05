@@ -86,13 +86,13 @@ public class GUI extends JFrame {
 	  
 	  public FileFilter mp3FileFilter() {
 		  
-		  final String endung = ".mp3";
+		  final String extension = ".mp3";
 	        
 		  FileFilter fileFilter = new FileFilter() {
 			
 			@Override
 			public String getDescription() {
-				 return endung + " only";
+				 return extension + " only";
 			}
 			
 			@Override
@@ -103,7 +103,7 @@ public class GUI extends JFrame {
 	            if(f.isDirectory()) return true;
 	            
 	            // true, wenn File gewuenschte Endung besitzt
-	            return f.getName().toLowerCase().endsWith(endung);
+	            return f.getName().toLowerCase().endsWith(extension);
 			}
 		};
 		  return fileFilter;
